@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aliança das Criaturas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login" class="overlay">
+    <div class="box">
+      <h1>Aliança das Criaturas</h1>
+      <input id="user" placeholder="Nome" maxlength="16" autocomplete="username">
+      <input id="pass" type="password" placeholder="Palavra-passe" autocomplete="current-password">
+      <div class="row">
+        <button id="btn-login">Entrar</button>
+        <button id="btn-register">Criar conta</button>
+      </div>
+      <p id="login-error" class="error"></p>
+    </div>
+  </div>
+
+  <div id="starter" class="overlay hidden">
+    <div class="box">
+      <h2>Escolhe a tua primeira criatura</h2>
+      <div id="starter-list" class="row"></div>
+    </div>
+  </div>
+
+  <main id="game" class="hidden">
+    <section class="left">
+      <canvas id="map"></canvas>
+      <div id="battle" class="hidden">
+        <div class="combatants">
+          <div id="b-me" class="combatant"></div>
+          <div class="vs">VS</div>
+          <div id="b-wild" class="combatant"></div>
+        </div>
+        <div id="b-log" class="log"></div>
+        <div id="b-moves" class="row wrap"></div>
+        <div class="row wrap">
+          <button data-act="capture">Orbe</button>
+          <button data-act="potion">Poção</button>
+          <button data-act="run">Fugir</button>
+        </div>
+        <div id="b-switch" class="row wrap"></div>
+      </div>
+      <p class="hint">Setas/WASD para andar · relva = criaturas selvagens · H = centro de cura</p>
+    </section>
+
+    <aside class="right">
+      <div class="panel">
+        <h3 id="me-name"></h3>
+        <div id="items"></div>
+      </div>
+      <div class="panel">
+        <h3>Equipa</h3>
+        <ol id="team"></ol>
+      </div>
+      <div class="panel">
+        <h3>Aliança</h3>
+        <div id="alliance-info"></div>
+        <div id="alliance-actions" class="row">
+          <input id="alliance-name" placeholder="Nome da aliança" maxlength="24">
+          <button id="btn-a-create">Fundar</button>
+          <button id="btn-a-join">Entrar</button>
+        </div>
+        <button id="btn-a-leave" class="hidden">Sair da aliança</button>
+        <button id="btn-a-rank">Ranking</button>
+        <ol id="alliance-rank"></ol>
+      </div>
+      <div class="panel chat">
+        <div id="chat-log" class="log"></div>
+        <div class="row">
+          <select id="chat-channel">
+            <option value="global">Global</option>
+            <option value="alliance">Aliança</option>
+          </select>
+          <input id="chat-input" placeholder="Mensagem..." maxlength="200">
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="hidden"></div>
+  <script src="client.js"></script>
+</body>
+</html>

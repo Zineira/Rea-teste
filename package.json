@@ -1,0 +1,23 @@
+{
+  "name": "alianca-das-criaturas",
+  "version": "1.0.0",
+  "description": "RPG online de captura de criaturas com alianças",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zineira/Rea-teste.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zineira/Rea-teste/issues"
+  },
+  "homepage": "https://github.com/Zineira/Rea-teste#readme",
+  "dependencies": {
+    "ws": "^8.22.0"
+  },
+  "private": true
+}

@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, sans-serif; background: #1d2330; color: #eef;
+}
+button, input, select {
+  font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid #4a5570;
+  background: #2b3346; color: #eef;
+}
+button { cursor: pointer; }
+button:hover:not(:disabled) { background: #3b4766; }
+button:disabled { opacity: .45; cursor: default; }
+.hidden { display: none !important; }
+.row { display: flex; gap: 6px; align-items: center; }
+.wrap { flex-wrap: wrap; margin-top: 6px; }
+.error { color: #ff8a8a; min-height: 1.2em; }
+.overlay {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(10, 12, 20, .85); z-index: 10;
+}
+.box {
+  background: #262d3d; padding: 24px; border-radius: 12px; display: flex; flex-direction: column;
+  gap: 10px; min-width: 300px; max-width: 92vw;
+}
+.box h1, .box h2 { margin: 0 0 8px; text-align: center; }
+#starter-list button { display: flex; flex-direction: column; padding: 12px; min-width: 100px; }
+main { display: flex; gap: 16px; padding: 16px; flex-wrap: wrap; }
+.left { flex: 1 1 560px; max-width: 760px; }
+.right { flex: 0 1 320px; display: flex; flex-direction: column; gap: 10px; min-width: 260px; }
+canvas { width: 100%; image-rendering: pixelated; border-radius: 8px; display: block; }
+.hint { opacity: .6; font-size: .85em; }
+.panel { background: #262d3d; border-radius: 10px; padding: 10px 12px; }
+.panel h3 { margin: 0 0 6px; }
+#team { margin: 0; padding-left: 20px; }
+#team li { margin: 4px 0; }
+.hpbar { height: 6px; background: #444; border-radius: 3px; overflow: hidden; margin-top: 2px; }
+.hpbar > div { height: 100%; background: #5fd17a; }
+.log { max-height: 160px; overflow-y: auto; font-size: .9em; background: #1a1f2b; padding: 6px; border-radius: 6px; }
+.chat .log { height: 160px; margin-bottom: 6px; }
+.chat input { flex: 1; min-width: 0; }
+#alliance-actions input { flex: 1; min-width: 0; }
+#battle { background: #262d3d; border-radius: 10px; padding: 12px; margin-top: 10px; }
+.combatants { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.combatant { flex: 1; }
+.vs { padding: 0 12px; opacity: .6; }
+.type { font-size: .75em; padding: 1px 6px; border-radius: 8px; background: #444; margin-left: 4px; }
+.t-Fogo { background: #c2492f; } .t-Agua { background: #2f6fc2; } .t-Planta { background: #3c9a3c; }
+.t-Eletrico { background: #b9a420; color: #111; } .t-Terra { background: #8a6a3a; }
+.t-Vento { background: #6aa6b8; } .t-Normal { background: #777; }
+#toast {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #3b4766;
+  padding: 10px 16px; border-radius: 8px; z-index: 20; max-width: 90vw;
+}
